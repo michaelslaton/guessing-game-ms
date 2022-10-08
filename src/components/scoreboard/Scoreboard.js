@@ -12,11 +12,19 @@ export default function Scoreboard({ wins, losses }){
     <div className="score-board__wrapper">
 
       <div>
-        Wins: {wins} Losses: {losses}
+        <div className="score-board__wins--wrapper">
+          <h1 className="score-board__wins">Wins </h1>
+          <h2 className="score-board__wins--number">{wins}</h2>
+        </div>
+        <div className="score-board__loss--wrapper">
+          <h1 className="score-board__loss">Losses </h1>
+          <h2 className="score-board__loss--number">{losses}</h2>
+        </div>
       </div>
 
       <div>
-        Winrate: {average()}%
+        <h3 className="score-board__winrate">Winrate </h3>
+        <h3 className="score-board__winrate--number">{average()}%</h3>
       </div>
       
     </div>

@@ -25,6 +25,8 @@ const reducer = (state, action) => {
       return { ...state, b2color: "red" }
     case "b3loss":
       return { ...state, b3color: "red" }
+    case "bgwin":
+      return { ...state, bgwin: action.payload }
     case "resetColors":
       return { ...state, b1color: "white", b2color: "white", b3color: "white" }
     default:
@@ -41,6 +43,7 @@ export default function App() {
     b1color: "white",
     b2color: "white",
     b3color: "white",
+    bgwin: false,
   })
 
   useEffect(() => randomizer, []);
@@ -54,10 +57,11 @@ export default function App() {
   const handleReset = () => {
     dispatch({ type: "resetColors" })
     dispatch({ type: "reset" })
+    dispatch({ type: `bgwin`, payload: false })
   }
 
   return (
-    <div className="game-screen">
+    <div className={`game-screen ${state.bgwin ? "bgwin" : ""}`}>
       <div>
         <Scoreboard wins={state.wins} losses={state.losses} />
       </div>

@@ -11,6 +11,8 @@ body {
   padding: 1.5rem 1rem;
   background-color: #260a4d;
   border-radius: 15px;
+  box-shadow: 0 -5px 50px #1c0739;
+  transition: 500ms ease-in-out;
 }
 
 .game-controls {
@@ -23,19 +25,19 @@ body {
 .game-button {
   margin: 0 5px;
   padding: 20px 6rem;
-  border: 4px solid #777777;
+  border: 0;
   border-radius: 5px;
-  background-color: #777777;
+  background-color: #919191;
   transition: 300ms ease-in-out;
   cursor: pointer;
 }
 .game-button:hover {
   background-color: #ffffff;
+  box-shadow: 0 3px 10px #ffffff;
   transition: 100ms ease-in-out;
 }
 .game-button:active {
-  border: 4px solid #ffffff;
-  transition: 100ms ease-in-out;
+  background-color: #ffff00;
 }
 .game-button--light {
   width: 92%;
@@ -44,29 +46,97 @@ body {
   border-radius: 15px;
   background-color: white;
 }
+
 .green {
   background-color: #00ff00;
+  box-shadow: 0 -2px 20px #00ff00;
+  transition: 50ms ease-in-out;
 }
 .red {
   background-color: #ff0000;
+  box-shadow: 0 -2px 20px #ff0000;
+  transition: 50ms ease-in-out;
 }
 .white {
-  background-color: #ffffff;
+  background-color: #cbcbcb;
+  transition: 50ms ease-in-out;
+}
+.bgwin {
+  box-shadow: 0 -5px 80px #00ff2f;
+  transition: 400ms ease-in-out;
 }
 
 .score-board__wrapper {
+  display: flex;
+  flex-direction: column;
   text-align: center;
+}
+
+.score-board__wins--wrapper {
+  text-align: center;
+  display: inline-block;
+  margin: 0 4%;
+}
+.score-board__wins {
+  display: inline-block;
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin: 0;
+}
+.score-board__wins--number {
+  display: inline-block;
+  font-size: 2rem;
+  margin: 0;
+  margin-left: 20px;
+}
+.score-board__loss--wrapper {
+  text-align: center;
+  display: inline-block;
+  margin: 0 4%;
+}
+.score-board__loss {
+  display: inline-block;
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin: 0;
+}
+.score-board__loss--number {
+  display: inline-block;
+  font-size: 2rem;
+  margin: 0;
+  margin-left: 20px;
+}
+.score-board__winrate {
+  display: inline-block;
+  text-transform: uppercase;
+  margin: 0;
+}
+.score-board__winrate--number {
+  display: inline-block;
+  margin: 10px 0 0 15px;
 }
 
 .reset-button {
   margin: 20px auto 0;
   cursor: pointer;
   color: #000000;
-  background: #ff0000;
+  background: #920000;
   border: 0;
   border-radius: 5px;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: bold;
   text-transform: uppercase;
-  padding: .5rem 3.5rem;
+  letter-spacing: 8px;
+  padding: .2rem 2rem;
+  transition: 400ms ease-in-out;
+}
+.reset-button:hover {
+  background: #ff0000;
+  box-shadow: 0 0 15px #ff0000;
+  color: #ffffff;
+  transition: 100ms ease-in-out;
+}
+.reset-button:active {
+  color: #ff0000;
+  background: #ffffff;
 }
