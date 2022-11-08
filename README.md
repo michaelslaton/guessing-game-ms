@@ -1,0 +1,1 @@
+My very first application I built on my own, before attending Thinkful, was a simple Javascript guessing game. Here, I am recreating that app in React and adding new functionality in the near future ( such as a high score board ).
