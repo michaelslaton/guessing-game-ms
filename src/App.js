@@ -1,7 +1,7 @@
-import { useEffect, useReducer } from "react";
-import Scoreboard from "./components/scoreboard/Scoreboard";
-import GameButton from "./components/game-button/GameButton";
 import "./app.css";
+import { useEffect, useReducer } from "react";
+import GameButton from "./components/game-button/GameButton";
+import Scoreboard from "./components/scoreboard/Scoreboard";
 
 const reducer = (state, action) => {
   switch (action.type) {
